@@ -40,10 +40,14 @@
   overflow: hidden;
   padding: 64px 24px 80px;
 }
+.heroLeft {
+  display: flex; flex-direction: column;
+  align-items: flex-start;
+}
 .heroBannerWrap {
   position: relative; z-index: 1;
-  width: 100%; max-width: 1100px;
-  margin: 0 auto 8px;
+  width: 100%;
+  margin: 0 0 20px;
 }
 .heroBg {
   position: absolute; inset: 0; z-index: 0;
@@ -87,7 +91,7 @@
   margin-bottom: 32px;
 }
 .heroLogoImg {
-  width: 100%; max-width: 720px; height: auto; display: block; margin: 0 auto;
+  width: 100%; max-width: 420px; height: auto; display: block;
   filter: drop-shadow(0 0 28px rgba(0,183,154,.4));
 }
 .heroTitleSub {
@@ -248,6 +252,9 @@
 @media (max-width: 900px) {
   .heroInner { grid-template-columns: 1fr; gap: 40px; }
   .heroVisual { display: none; }
+  .heroLeft { align-items: center; text-align: center; }
+  .heroLogoImg { max-width: 320px; margin: 0 auto; }
+  .heroBtns { justify-content: center; }
   .whyGrid { grid-template-columns: 1fr; gap: 40px; }
   .stat { border-right: none; border-bottom: 1px solid var(--border); }
   .stat:last-child { border-bottom: none; }
